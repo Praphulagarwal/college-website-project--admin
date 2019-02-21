@@ -1,0 +1,31 @@
+<mat-card>
+  <form [formGroup]="form" (submit)="onSignUp()">
+    <mat-form-field>
+      <input matInput type="email" placeholder="E-Mail" formControlName="email" required email>
+      <mat-error *ngIf="form.get('email').invalid">Please Enter Valid email</mat-error>
+
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" name="password" formControlName="password" required>
+      <mat-icon matSuffix (click)="hide = !hide">
+        {{hide ? 'visibility_off' : 'visibility'}}
+      </mat-icon>
+      <mat-error *ngIf="form.get('password').invalid">Please Enter Valid Password</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type= 'password' placeholder=" Confirm Password" formControlName="cpassword" appCompareValidator="password" required>
+        <mat-error *ngIf="form.controls['cpassword'].errors?.required">Please Enter Confirm Password</mat-error>
+         <mat-error *ngIf="form.controls['cpassword'].errors?.appCompareValidator">Confirm Password does not match</mat-error>
+    </mat-form-field>
+      <mat-form-field>
+          <mat-select placeholder="Branch" required>
+             <mat-option *ngFor="let br of Branch" [value]="br.branch">
+               {{ br.viewBranch}}
+
+             </mat-option>
+            </mat-select>
+      </mat-form-field>
+   <button mat-raised-button color="primary" type="submit">Signup</button>
+  </form>
+  </mat-card>
+

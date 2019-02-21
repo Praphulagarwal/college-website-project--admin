@@ -1,0 +1,23 @@
+.mat-card {
+  display: flex;
+  max-width: 500px ;
+  max-height: 900px ;
+  margin: 1rem auto;
+  flex-direction: column;
+}
+
+.mat-card a{
+  margin-top: 10px;
+  margin-left: 20px;
+
+}
+
+.mat-form-field {
+  margin-top: 10px;
+  width: 100%;
+  max-height: 200%;
+}
+
+.mat-card button{
+  max-width: 100px;
+}

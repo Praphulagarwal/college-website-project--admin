@@ -1,0 +1,23 @@
+.app-header {
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  background-color: #e91e63;
+  padding: 20px 10px;
+
+}
+
+.app-header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+.app-header
+  h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
+    font-size: 35px;
+    line-height: 30px;
+
+  }

@@ -1,0 +1,18 @@
+<mat-card>
+  <form [formGroup]="form" (submit)="onAdminLogin()">
+    <mat-form-field>
+      <input matInput type="email" placeholder="E-Mail" formControlName="email" required email>
+
+      <mat-error *ngIf="form.get('email').invalid">Please enter valid email</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" formControlName="password" required>
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
+      </mat-icon>
+      <mat-error *ngIf="form.get('password').invalid">Please enter password</mat-error>
+    </mat-form-field>
+   <button mat-raised-button color="primary" type="submit" >LogIn</button>
+
+   <a routerLink="/signup" routerLinkActive="active" mat-accent>Signup</a> | For New Account
+  </form>
+  </mat-card>
