@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, NgForm } from '@angular/forms';
+import { AdminService } from 'app/services/admin.service';
 
 @Component({
   selector: 'app-login',
@@ -11,12 +12,13 @@ export class LoginComponent implements OnInit {
 
   hide = true;
   form: FormGroup;
-  constructor() { }
+  constructor(public adminService: AdminService) { }
 
   onAdminLogin() {
     if (this.form.invalid) {
       return;
     }
+    this.adminService.loginAdmin(this.form.value.email, this.form.value.password);
   }
 
   ngOnInit() {

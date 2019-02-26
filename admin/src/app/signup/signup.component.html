@@ -1,7 +1,8 @@
+<app-header></app-header>
 <mat-card>
   <form [formGroup]="form" (submit)="onSignUp()">
     <mat-form-field>
-      <input matInput type="email" placeholder="E-Mail" formControlName="email" required email>
+      <input matInput type="email" placeholder="E-Mail" name="email" formControlName="email" required email>
       <mat-error *ngIf="form.get('email').invalid">Please Enter Valid email</mat-error>
 
     </mat-form-field>
@@ -13,13 +14,13 @@
       <mat-error *ngIf="form.get('password').invalid">Please Enter Valid Password</mat-error>
     </mat-form-field>
     <mat-form-field>
-        <input matInput type= 'password' placeholder=" Confirm Password" formControlName="cpassword" appCompareValidator="password" required>
+        <input matInput type= 'password' placeholder=" Confirm Password" name="cpassword" formControlName="cpassword" appCompareValidator="password" required>
         <mat-error *ngIf="form.controls['cpassword'].errors?.required">Please Enter Confirm Password</mat-error>
          <mat-error *ngIf="form.controls['cpassword'].errors?.appCompareValidator">Confirm Password does not match</mat-error>
     </mat-form-field>
       <mat-form-field>
-          <mat-select placeholder="Branch" required>
-             <mat-option *ngFor="let br of Branch" [value]="br.branch">
+          <mat-select placeholder="Branch" formControlName="branch" name="branch" required>
+             <mat-option *ngFor="let br of branch" [value]="br.Branch">
                {{ br.viewBranch}}
 
              </mat-option>
