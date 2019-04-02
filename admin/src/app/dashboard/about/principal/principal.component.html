@@ -1,0 +1,34 @@
+<div class="jumbotron jumbotron-fluid " >
+  <div class="container">
+    <h1 >Principal</h1>
+
+  </div>
+</div>
+<form>
+<div [formGroup]="form" (submit)="onSavePost()">
+
+   <div>
+        <button mat-stroked-button type="button" (click)="filePicker.click()">Pick Image</button>
+        <input type="file" #filePicker  (change)= "onImagePicked($event)">
+
+      </div>
+      <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+       <img [src]="imagePreview">
+   </div>
+<div class="md-form">
+  <div class="form-group shadow-textarea">
+
+    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" formControlName="content" rows="6" placeholder="Message From the principal...">
+
+    </textarea>
+  </div>
+
+
+
+  <button class="btn info" [disabled]="!form.valid">Save</button>
+  <button class="btn info" [disabled]="!form.valid">Edit</button>
+
+</div>
+
+</div>
+</form>

@@ -1,0 +1,26 @@
+.btn {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  cursor: pointer;
+  margin-left: 8px;
+
+}
+
+.info {background-color: #2196F3;}
+.info:hover {background: #0b7dda;}
+
+input[type="file"] {
+  visibility: hidden;
+}
+
+.image-preview {
+  height: 15rem ;
+  margin: 2rem 0;
+}
+
+.image-preview img{
+height: 100% ;
+}
+
+

@@ -1,0 +1,112 @@
+
+<div class= "container-fluid">
+  <span class="app-link">
+  <a routerLink="/" routerLinkActive ="Active" title="Home"> Home | </a>
+  <a routerLink="/contact" routerLinkActive ="Active" title="Contact Us"> Contact Us |</a>
+  Admission helpline:  +(0562) 246082 |
+  <a href="https://www.facebook.com/fetagca/" title="Facebook Page"><img src="assets/download12.png" alt="facebook" ></a>
+  <a href="https://www.instagram.com/fetagracollegeagra/" title="Instagram Page"><img src="assets/instaimg.jpg" alt="instagram" style="margin-left: 7px" ></a>
+</span>
+</div>
+
+
+<div style="height: auto;">
+
+  <mat-toolbar >
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <a mat-button class="logo" routerLink="/">
+        <span><img src="assets/logo2.png" alt="" srcset="" style="height: auto;"></span>
+      </a>
+
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <nav mat-tab-nav-bar [backgroundColor]="background">
+
+        <a mat-tab-link
+           (click) ="activeLink = link1"
+           [active]="activeLink == link1"  [matMenuTriggerFor]="about"> ABOUT
+        </a>
+        <mat-menu #about="matMenu">
+          <button mat-menu-item>College at glance</button>
+          <button mat-menu-item>Principal</button>
+                      </mat-menu>
+        <a mat-tab-link
+           (click)="activeLink = link2"
+           [active]="activeLink == link2"  [matMenuTriggerFor]="academics"> ACADEMICS
+        </a>
+        <mat-menu #academics="matMenu">
+            <button mat-menu-item>Academic Calender</button>
+            <button mat-menu-item>Examination Cell</button>
+            <button mat-menu-item>Programmes</button>
+        </mat-menu>
+        <a mat-tab-link
+           (click)="activeLink = link3"
+           [active]="activeLink == link3"  [matMenuTriggerFor]="admission"> ADMISSION
+        </a>
+        <mat-menu #admission="matMenu">
+          <button mat-menu-item>Admission Process</button>
+          <button mat-menu-item>Admission Form</button>
+          <button mat-menu-item>Eligibility Criteria</button>
+          <button mat-menu-item>Fee Structure</button>
+          <button mat-menu-item>Courses & Intake</button>
+        </mat-menu>
+        <a mat-tab-link
+           (click)="activeLink = link4"
+           [active]="activeLink == link4"  [matMenuTriggerFor]="departments"> DEPARTMENTS
+        </a>
+        <mat-menu #departments="matMenu">
+          <button mat-menu-item>Computer Science & Engineering</button>
+          <button mat-menu-item>Mechanical Engineering</button>
+          <button mat-menu-item>Electronics Engineering</button>
+          <button mat-menu-item>Electrical Engineering</button>
+          <button mat-menu-item>Mechanical Engineering</button>
+                      </mat-menu>
+        <a mat-tab-link
+           (click)="activeLink = link5"
+           [active]="activeLink == link5"  [matMenuTriggerFor]="facilities"> FACILITIES
+        </a>
+        <mat-menu #facilities="matMenu">
+            <button mat-menu-item>Hostel Facility</button>
+            <button mat-menu-item>Sports</button>
+            <button mat-menu-item>Library</button>
+            <button mat-menu-item>Wifi Campus</button>
+                      </mat-menu>
+        <a mat-tab-link
+           (click)="activeLink = link6"
+           [active]="activeLink == link6"  [matMenuTriggerFor]="placements"> PLACEMENTS
+        </a>
+        <mat-menu #placements="matMenu">
+            <button mat-menu-item>Placement @fet</button>
+            <button mat-menu-item>Student's Placement</button>
+            <button mat-menu-item>Recruiters</button>
+        </mat-menu>
+          <a mat-tab-link
+           (click)="activeLink = link7"
+           [active]="activeLink == link7"> CONTACT US </a>
+
+      </nav>
+      </div>
+    </mat-toolbar>
+    <mat-sidenav-container fxFlexFill class="example-container">
+      <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+        <div fxLayout="column">
+          <a mat-button routerLink="/about">ABOUT</a>
+          <a mat-button routerLink="/academics">ACADEMICS</a>
+          <a mat-button routerLink="/admission">ADMISSION</a>
+          <a mat-button routerLink="/campuslife">CAMPUS LIFE</a>
+          <a mat-button routerLink="/facilities">FACILITIES</a>
+          <a mat-button routerLink="/placements">PLACEMENTS</a>
+          <a mat-button routerLink="/contact">CONTACT US</a>
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content fxflexFill>
+         <app-main></app-main>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+
+

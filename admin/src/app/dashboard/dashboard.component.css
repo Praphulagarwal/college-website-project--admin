@@ -8,6 +8,7 @@
 
 .sidenav .mat-toolbar {
   background: inherit;
+  background-color: darkcyan;
 }
 
 .mat-toolbar.mat-primary {
@@ -15,3 +16,16 @@
   top: 0;
   z-index: 1;
 }
+
+button.mat-menu-item{
+  background-color: white;
+}
+
+button.mat-menu-item:hover {
+  background-color: black ;
+  color: #fff !important;
+}
+
+
+
+

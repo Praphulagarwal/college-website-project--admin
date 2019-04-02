@@ -5,11 +5,52 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item  [matMenuTriggerFor]="about">About</a>
+      <mat-menu #about="matMenu">
+        <button mat-menu-item  >College at glance</button>
+        <button mat-menu-item routerLink= "about/principal" routerLinkActive= "active">Principal</button>
+                    </mat-menu>
+      <a mat-list-item routerLink= "academics" routerLinkActive= "active"  [matMenuTriggerFor]="academics">Academics</a>
+      <mat-menu #academics="matMenu">
+        <button mat-menu-item>Academic Calender</button>
+        <button mat-menu-item>Examination cell</button>
+        <button mat-menu-item>Programmes</button>
+                    </mat-menu>
+      <a mat-list-item routerLink= "admission" routerLinkActive= "active"  [matMenuTriggerFor]="admission">Admission</a>
+      <mat-menu #admission="matMenu">
+        <button mat-menu-item>Admission Process</button>
+        <button mat-menu-item>Admission Form</button>
+        <button mat-menu-item>Eligibility Criteria</button>
+        <button mat-menu-item>Fee Structure</button>
+        <button mat-menu-item>Courses & Intake</button>
+      </mat-menu>
+      <a mat-list-item routerLink= "departments" routerLinkActive= "active"  [matMenuTriggerFor]="departments">Departments</a>
+      <mat-menu #departments="matMenu">
+        <button mat-menu-item>Computer Science & Engineering</button>
+        <button mat-menu-item>Civil Engineering</button>
+        <button mat-menu-item>Electrical Engineering</button>
+        <button mat-menu-item>Electronics Engineering</button>
+        <button mat-menu-item>Mechanical Engineering</button>
+      </mat-menu>
+      <a mat-list-item routerLink= "facilities" routerLinkActive= "active"  [matMenuTriggerFor]="facilities">Facilities</a>
+      <mat-menu #facilities="matMenu">
+        <button mat-menu-item>Hostel Facility</button>
+        <button mat-menu-item>Sports</button>
+        <button mat-menu-item>Library</button>
+        <button mat-menu-item>Wifi Campus</button>
+
+      </mat-menu>
+      <a mat-list-item routerLink= "placements" routerLinkActive= "active"  [matMenuTriggerFor]="placements">Placements</a>
+      <mat-menu #placements="matMenu">
+        <button mat-menu-item>Placements @fet</button>
+        <button mat-menu-item>Student's Placements</button>
+        <button mat-menu-item>Recruiters</button>
+
+
+      </mat-menu>
     </mat-nav-list>
   </mat-sidenav>
+
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
@@ -20,8 +61,27 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>admin</span>
+      <span>Admin Panel</span>
+
     </mat-toolbar>
     <!-- Add Content Here -->
+
+
+<div>
+  <router-outlet ></router-outlet>
+</div>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+
+<!--<form (submit)="onSubmit()">
+  <div>
+  <button mat-stroked-button type="submit" (click)="filepicker.click()">Pick Image</button>
+  <input type="file" #filepicker (change)="onImagePicked($event)">
+</div>
+<div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+    <img [src]="imagePreview" >
+</div>
+
+</form>-->

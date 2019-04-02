@@ -3,10 +3,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule, MatCardModule, MatButtonModule, MatSelectModule, MatIconModule, MatToolbarModule, MatSidenavModule, MatListModule } from '@angular/material';
-
+import { MatMenuModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,9 @@ import { CompareValidatorDirective } from './shared/compare-validator.directive'
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HeaderComponent } from './header/header.component';
+import { PrincipalComponent } from './dashboard/about/principal/principal.component';
+import { MainComponent } from './dashboard/main/main.component';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +27,17 @@ import { HeaderComponent } from './header/header.component';
     SignupComponent,
     CompareValidatorDirective,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
+    PrincipalComponent,
+    MainComponent,
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     MatFormFieldModule,
     MatInputModule,
@@ -41,7 +48,8 @@ import { HeaderComponent } from './header/header.component';
     LayoutModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
 
 
   ],
