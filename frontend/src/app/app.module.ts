@@ -10,13 +10,17 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
+import { PrincipalComponent } from './main/about/principal/principal.component';
+import { FrontEndService } from './services/front-end.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +34,10 @@ import { MainComponent } from './main/main.component';
     MatListModule,
     MatMenuModule,
     MatTabsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FrontEndService],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

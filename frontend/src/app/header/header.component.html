@@ -32,7 +32,7 @@
         </a>
         <mat-menu #about="matMenu">
           <button mat-menu-item>College at glance</button>
-          <button mat-menu-item>Principal</button>
+          <button mat-menu-item (click)="fetchPrincipal()">Principal</button>
                       </mat-menu>
         <a mat-tab-link
            (click)="activeLink = link2"
@@ -104,7 +104,11 @@
         </div>
       </mat-sidenav>
       <mat-sidenav-content fxflexFill>
-         <app-main></app-main>
+
+
+
+         <router-outlet></router-outlet>
+
       </mat-sidenav-content>
     </mat-sidenav-container>
   </div>
