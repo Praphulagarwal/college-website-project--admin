@@ -50,3 +50,19 @@
   <img src="assets/02.jpg">
   <img src="assets/logo-32.jpg"> <img src="assets/download.jpg"></marquee>
 </div>
+
+<div class="row">
+  <div class="col-sm-2" style="background-color: CornflowerBlue;">
+      Notices
+  </div>
+  <div class="col-sm-10" style="background-color:darkcyan;">
+    <marquee>
+      <span *ngFor="let nt of notice">
+        <a routerLink="notices" routerLinkActive="active" style="text-decoration-color: red">{{ nt.noticesub }}</a>
+
+      </span>
+
+    </marquee>
+</div>
+
+

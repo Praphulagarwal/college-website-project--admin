@@ -1,0 +1,20 @@
+.notice-card {
+  max-width: 400px;
+}
+.mat-card {
+  display: flex;
+  max-width: 500px ;
+  max-height: 900px ;
+  margin: 1rem auto;
+  flex-direction: column;
+}
+mat-form-field,
+textarea {
+   width: 100%;
+
+}
+
+
+.mat-raised-button {
+  background-color: dodgerblue;
+}

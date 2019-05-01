@@ -1,0 +1,22 @@
+<div class="container">
+  <img src="assets/college2.jpg" alt="college2" class="responsive" style="width:100%;">
+      <div class="centered">
+              <h1>Notices</h1>
+       <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li>Notices</li>
+              </ul>
+              </div>
+            </div>
+            <br><br>
+
+
+
+<div class="overlay"></div>
+  <br>
+
+<mat-card>
+  <span *ngFor="let nt of notice">
+    {{ nt.notice }}
+  </span>
+</mat-card>

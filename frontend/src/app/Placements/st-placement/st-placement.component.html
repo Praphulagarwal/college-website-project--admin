@@ -1,0 +1,44 @@
+<div class="container">
+    <img src="assets/college2.jpg" alt="college2" class="responsive" style="width:100%;">
+        <div class="centered">
+                <h1>Student's Placements</h1>
+
+                </div>
+              </div>
+              <br><br>
+              <br><br>
+              <br>
+
+
+
+  <div class="overlay"></div>
+    <br>
+
+
+
+<div class="table-responsive">
+  <table class="table table-striped">
+
+      <tr>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Company</th>
+        <th>Batch</th>
+        <th>Package(LPA)</th>
+
+      </tr>
+
+
+      <tr  *ngFor= "let ps of placedStudent">
+        <td>{{ps.stName}}</td>
+        <td>{{ps.viewBranch}}</td>
+        <td>{{ps.company}}</td>
+        <td>{{ps.batch}}</td>
+        <td>{{ps.packages}}</td>
+
+
+      </tr>
+
+  </table>
+</div>
+

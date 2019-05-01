@@ -5,7 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PrincipalComponent } from './dashboard/about/principal/principal.component';
 import { MainComponent } from './dashboard/main/main.component';
-
+import { StPlacementComponent } from './dashboard/Placements/st-placement/st-placement.component';
 
 
 const routes: Routes = [
@@ -16,7 +16,8 @@ const routes: Routes = [
   component: DashboardComponent,
   children: [
     { path: '', component: MainComponent},
-    { path: 'about/principal', component: PrincipalComponent}
+    { path: 'about/principal', component: PrincipalComponent},
+    { path: 'Placements/stplacements', component: StPlacementComponent}
   ]
 }
 

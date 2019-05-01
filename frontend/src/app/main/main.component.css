@@ -18,6 +18,19 @@
 .icon-bar {
   margin-top: 28px;
 }
+h3 {
+  outline-color: red;
+  text-align: left;
+  max-width: 100%;
+  border: 15px ;
+  padding: 10px;
+  margin: 10px;
+  background-color: azure
+}
+
+h3.dashed{
+  outline-style: dashed;
+}
 
 @media (max-width: 768px)
 {
@@ -43,5 +56,9 @@
 .instagram {
   background: #dd4b39;
   color: white;
+}
+.col-sm-2 {
+  height:50px;
+  text-align: center;
 }
 

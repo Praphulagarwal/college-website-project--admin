@@ -1,0 +1,37 @@
+<div class="jumbotron jumbotron-fluid " >
+  <div class="container">
+    <h1 >Student's Placements</h1>
+
+  </div>
+</div>
+<mat-card>
+  <form [formGroup]="form" (submit)="onSaveStudent()">
+
+      <mat-form-field>
+        <input matInput placeholder="Student Name"  formControlName="stName" name="stName" required >
+
+      </mat-form-field>
+      <mat-form-field>
+      <mat-select placeholder="Branch" formControlName="viewbranchs" name="viewbranchs" required>
+        <mat-option *ngFor="let br of viewbranchs" [value]="br.viewbranch">
+
+          {{ br.viewbranch}}
+
+
+
+        </mat-option>
+       </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder= "Company" formControlName="company" name="company">
+      </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder= "Batch" formControlName="batch" name="batch">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder= "Package(LPA)" formControlName="package" name="package">
+        </mat-form-field>
+     <button mat-raised-button color="primary" type="submit">Save</button>
+    </form>
+    </mat-card>
+

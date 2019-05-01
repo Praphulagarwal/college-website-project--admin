@@ -40,10 +40,10 @@
         <button mat-menu-item>Wifi Campus</button>
 
       </mat-menu>
-      <a mat-list-item routerLink= "placements" routerLinkActive= "active"  [matMenuTriggerFor]="placements">Placements</a>
+      <a mat-list-item   [matMenuTriggerFor]="placements">Placements</a>
       <mat-menu #placements="matMenu">
         <button mat-menu-item>Placements @fet</button>
-        <button mat-menu-item>Student's Placements</button>
+        <button mat-menu-item routerLink= "Placements/stplacements" routerLinkActive= "active">Student's Placements</button>
         <button mat-menu-item>Recruiters</button>
 
 

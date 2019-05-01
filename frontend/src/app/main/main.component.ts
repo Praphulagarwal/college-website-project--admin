@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Notices } from '../models/notice.model';
+import { FrontEndService } from '../services/front-end.service';
 
 
 
@@ -9,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  notice: Notices[] = [];
+
+  constructor(private fs: FrontEndService) { }
 
   ngOnInit() {
+    this.fs.getNotice()
+            .subscribe((noticeData: any) => {
+                        this.notice = noticeData.notice.reverse();
+                      });
+
   }
 
 }

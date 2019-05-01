@@ -18,6 +18,9 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { HeaderComponent } from './header/header.component';
 import { PrincipalComponent } from './dashboard/about/principal/principal.component';
 import { MainComponent } from './dashboard/main/main.component';
+import { DashmoduleModule } from './dashboard/dashmodule/dashmodule.module';
+import { CseComponent } from './Dashboard/Departments/cse/cse.component';
+
 
 
 @NgModule({
@@ -30,6 +33,8 @@ import { MainComponent } from './dashboard/main/main.component';
     HeaderComponent,
     PrincipalComponent,
     MainComponent,
+    CseComponent
+
 
   ],
   imports: [
@@ -49,10 +54,12 @@ import { MainComponent } from './dashboard/main/main.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    DashmoduleModule
 
 
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

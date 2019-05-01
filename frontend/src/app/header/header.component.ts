@@ -38,5 +38,8 @@ export class HeaderComponent {
      fetchPrincipal() {
        this.router.navigate(['about/principal']);
      }
+     fetchPlacedstudents() {
+      this.router.navigate(['Placements/stplacements']);
+     }
 }
 
